@@ -1,0 +1,19 @@
+{
+  "name": "LPU wifi logger",
+  "version": "0.1.0",
+  "description": "This extension automatically logins in to the LPU wireless or LPU hostels wifi.",
+  "manifest_version": 3,
+  "icons": {
+    "24": "assets/logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://internet.lpu.in/*"],
+      "js": ["foreground.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "storage"]
+}
